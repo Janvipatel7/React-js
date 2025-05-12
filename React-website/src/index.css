@@ -1,0 +1,32 @@
+
+section{
+    background-image: url('../src/assets/image/herobanner__1.d2f38a2d.jpg');
+    height: 100vh;
+    background-size: cover;
+}
+header{
+    position: absolute;
+    width: 100%;
+}
+.back-color{
+    padding:20px;
+    background-color: rgba(255, 240, 250, .05) !important;
+    border-radius: 10px;
+}
+li{
+    list-style: none;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+}
+.social-icons:hover{
+    background-color: #ec0294;
+    border: none;
+}
