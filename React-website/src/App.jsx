@@ -1,12 +1,16 @@
-import React from 'react'
+
 import Header from './assets/components/Header'
-import Main from './assets/components/HeroMain'
+import HeroMain from './assets/components/HeroMain'
+import Service from './assets/components/Service'
+import About from './assets/components/About'
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Main />
+      <HeroMain />
+      <Service />
+      <About />
     </div>
   )
 }

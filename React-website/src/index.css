@@ -87,7 +87,67 @@ li{
 }
 .service-bg{
     padding-top: 120px;
-    background-image: url('./src/assets/image/service-bg');
+    background-image:url('./src/assets/image/service__bg__img.677353e5.png');
+    background-color: #fff0fa ;
     height: 100vh;
     background-size: cover;
+}
+.pb-60{
+    padding-bottom: 70px;
+}
+.s-h3{
+    font-size: 37px;
+    font-weight: 700;
+}
+.s-text{
+    color:#5f6c76;;
+    text-align: center;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 32px;
+    margin: 0;
+}
+.service-card{
+    padding: 32px 45px 40px;
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .05);
+    text-align: center;
+    border-radius:8px;
+    position: relative;
+    overflow: hidden;
+}
+.card-text{
+    color: #5f6c76;
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+.card-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-btn button{
+    border: none;
+    border-radius: 50%;
+    padding: 15px 20px;
+    background-color: #fff0fa;
+    border: 1px solid #fff0fa;
+}
+.card-btn i{
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.pt-120{
+    padding-top: 120px;
+}
+.about-bg{
+    background-image: url('./src/assets/image/testimonial__2.webp');
+    padding: 10px 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+   
 }
