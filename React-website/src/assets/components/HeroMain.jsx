@@ -1,17 +1,18 @@
 import LeftMain from "./leftMain"
+import RightMain from "./RightMain"
 
 
-const Main = () => {
+const HeroMain = () => {
   return (
-    <section>
+    <section className="hero-section">
         <div className="container">
             <div className="row">
                 <LeftMain />
-                <div className="col-6"></div>
+                <RightMain />
             </div>
         </div>
     </section>
   )
 }
 
-export default Main
+export default HeroMain
