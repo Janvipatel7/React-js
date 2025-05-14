@@ -1,9 +1,8 @@
 
-import AboutSecond from './AboutSecond'
-import AboutSlider from './AboutSlider'
 import FirstService from './FirstService'
+import TestimonialSecond from './TestimonialSecond';
 
-const About = () => {
+const Testimonial = () => {
     let title ="INSPIRING TESTIMONIALS FROM HAPPY CLIENTS";
     let desc ="Sagittis purus sit amet volutpat consequat mauris nunc congue nisi and tortor dignissim convallis aenean venenatis urna";
     return (
@@ -11,7 +10,7 @@ const About = () => {
             <div className="container">
                 <FirstService title={title} desc={desc}/>
                 <div className='row'>
-                    <AboutSecond />
+                    <TestimonialSecond />
                  
                 </div>
             </div>
@@ -19,4 +18,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Testimonial

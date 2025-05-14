@@ -3,22 +3,22 @@ import FirstService from './FirstService'
 import ServiceCard from './ServiceCard'
 let cardArr = [
   {
-    image:"./src/assets/image/service__1.png",
+    image:"/image/service__1.png",
     title:"Agency Consulting",
     desc:"Sagittis purus sit amet volutpat consequat mauris nunc congue nisi",
   },
   {
-    image:"./src/assets/image/service__2.png",
+    image:"/image/service__2.png",
     title:"Agency Consulting",
     desc:"Sagittis purus sit amet volutpat consequat mauris nunc congue nisi",
   },
   {
-    image:"./src/assets/image/service__3.png",
+    image:"/image/service__3.png",
     title:"Agency Consulting",
     desc:"Sagittis purus sit amet volutpat consequat mauris nunc congue nisi",
   },
   {
-    image:"./src/assets/image/service__4.png",
+    image:"/image/service__4.png",
     title:"Agency Consulting",
     desc:"Sagittis purus sit amet volutpat consequat mauris nunc congue nisi",
   },

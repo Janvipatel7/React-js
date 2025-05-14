@@ -4,7 +4,7 @@ const Header = () =>{
             <div className="container">
                 <div className="d-flex align-items-center justify-content-between back-color">
                     <div>
-                        <img src="./src/assets/image/Logo_1.webp" alt="" />
+                        <img src="../../../public/image/Logo_1.webp" alt="" />
 
                     </div>
                     <div>
@@ -24,16 +24,16 @@ const Header = () =>{
                             <ul>
                                 <li className="d-flex align-items-center justify-content-between gap-3">
                                     <span className="social-icons">
-                                        <i class="bi bi-instagram"></i>
+                                        <i className="bi bi-instagram"></i>
                                     </span>
                                     <span className="social-icons">
-                                        <i class="bi bi-threads"></i>
+                                        <i className="bi bi-threads"></i>
                                     </span>
                                     <span className="social-icons">
-                                        <i class="bi bi-twitter"></i>
+                                        <i className="bi bi-twitter"></i>
                                     </span>
                                     <span className="social-icons">
-                                        <i class="bi bi-github"></i>
+                                        <i className="bi bi-github"></i>
                                     </span>
                                 </li>
                             </ul>
