@@ -4,7 +4,7 @@ const Header = () =>{
             <div className="container">
                 <div className="d-flex align-items-center justify-content-between back-color">
                     <div>
-                        <img src="../../../public/image/Logo_1.webp" alt="" />
+                        <img src="image/Logo_1.webp" alt="" />
 
                     </div>
                     <div>
@@ -21,7 +21,7 @@ const Header = () =>{
                     </div>
                     <div>
                         <nav>
-                            <ul>
+                            <ul className="m-0 p-0">
                                 <li className="d-flex align-items-center justify-content-between gap-3">
                                     <span className="social-icons">
                                         <i className="bi bi-instagram"></i>

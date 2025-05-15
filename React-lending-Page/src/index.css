@@ -47,7 +47,6 @@ li {
 .all-btn {
     padding: 20px 45px;
     background: linear-gradient(90deg, #00229e, #6e1299 47.92%, #fe0094);
-    ;
     color: white;
     font-size: 14px;
     font-style: normal;
@@ -56,7 +55,6 @@ li {
     border: none;
     border-radius: 8px;
     font-family: "Source Sans Pro";
-    ;
     transition: .3s;
     display: inline-block;
 }
@@ -72,6 +70,7 @@ li {
     z-index: -1;
     background-position: center;
     background-repeat: no-repeat;
+    animation: left-right 2s linear infinite;
 }
 
 .hero-img:before {
@@ -85,7 +84,7 @@ li {
     z-index: -1;
     background-position: bottom;
     background-repeat: no-repeat;
-
+    animation: left-right 2s linear infinite;
 
 }
 
@@ -115,7 +114,6 @@ li {
 
 .s-text {
     color: #5f6c76;
-    ;
     text-align: center;
     font-weight: 500;
     font-size: 17px;
@@ -131,6 +129,34 @@ li {
     border-radius: 8px;
     position: relative;
     overflow: hidden;
+    transition: 0.3s all linear;
+}
+.service-card:hover{
+    background: linear-gradient(90deg, #00229e, #6e1299 47.92%, #fe0094);
+    transform: translateY(-15px);
+}
+.service-card h4,p{
+    transition: 0.4s all linear;
+}
+.service-card:hover h4{
+    color: #fff;
+}
+.service-card:hover p{
+    color: #fff;
+}
+.service-card:hover .service-img-bg{
+    visibility: visible;
+    left: -25px;
+    top: -60px;
+    transition: 0.3s all linear;
+    
+}
+
+.service-img-bg{
+    position: absolute;
+    left: -35px;
+    top: -50px;
+    visibility: hidden;    
 }
 
 .card-text {
@@ -174,11 +200,9 @@ li {
     position: relative;
 
 }
-
 .testimonial-inner {
     padding: 70px;
     background: #fff0fa;
-    ;
     margin-right: 130px;
     margin-left: 50px;
     border-radius: 8px;
@@ -209,6 +233,19 @@ li {
     left: -80px;
     position: absolute;
     animation: left-right 2s linear infinite;
+}
+.width-50{
+    display: inline-block;
+    position: absolute;
+    top: -90px;
+    right: -60px;
+    animation: left-right 2s linear infinite;
+    width: 200px !important;
+    z-index: 999;
+}
+.width-50 img{
+    transform: rotate(265deg);
+
 }
 
 .phhol {
@@ -280,23 +317,105 @@ li {
     margin: 0;
 }
 
+.team {
+    background-image: url(../../../public/image/team_bg.459ff40e.png);
+}
+
 .team-left {
     background-color: #18239d;
-    left: 0;
-    bottom: 0;
-    max-width: 635px;
-    top: 0;
-    padding: 80px;
+    padding: 20px 0px 0px 70px;
     display: flex;
     align-items: center;
 }
 
+.team-profile {
+    padding: 0px 40px 0px 60px;
+}
+
+.team-desig {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 32px;
+    opacity: .6;
+}
+
+.profile-hover {
+    transition: 0.3s;
+    position: relative;
+    z-index: 999;
+}
+
+.profile-hover:hover {
+    transform: translateY(-10px);
+}
+
+.team-icon {
+    position: absolute;
+    width: 250px;
+    right: 0;
+    top: -20px;
+    animation: left-right 2s linear infinite;
+}
+.project-section{
+    background-color: #fff0fa;
+    height: 100vh;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 90px 0px 70px 0px;
+}
+.project-box{
+    background: #fff;
+    border-radius: 8px;
+    padding-block: 70px;
+    padding-inline: auto;
+}
+
+.message-icon{
+    position: absolute;
+    left: 74px;
+    top: 74px;
+}
+.project-title h3{
+    color: #0a0624;
+    text-align: left;
+    font-size: 37px;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 0;
+}
+.project-title span{
+    color: #fe0094;
+    text-decoration: underline;
+}
+.rotate{
+    animation: rotate 10s linear infinite;
+}
+.brand-badge{
+    cursor: pointer;
+
+}
+.brand-badge:hover .rotate{
+    animation-play-state: paused;
+}
+
 @keyframes left-right {
-    0%{
+    0% {
         transform: translateX(0px);
-    }50%{
+    }
+
+    50% {
         transform: translateX(-20px);
-    }100%{
+    }
+
+    100% {
         transform: translateX(0px);
-    }    
+    }
+}
+@keyframes rotate {
+        0%{
+            transform: rotate(0);  
+        }
+        100%{
+            transform: rotate(1turn);  
+        }
 }

@@ -5,6 +5,7 @@ import Service from './assets/components/Service'
 import Testimonial from './assets/components/Testimonial'
 import About from './assets/components/About'
 import Team from './assets/components/Team'
+import Project from './assets/components/Project'
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
       <Service />
       <About />
       <Team/>
+      <Project />
       <Testimonial/>
     </div>
   )
