@@ -8,8 +8,9 @@ const GithubAPI = () => {
     useEffect(() =>{
         if(!query) return;
         const fetchUser = async ()=>{
-        const res = await fetch("https://api.github.com/users");
+        const res = await fetch(`https://api.github.com/users/${query}`);
         const data = await res.json();
+        setUserData(data);
         console.log(data);
         }
         fetchUser();
@@ -18,13 +19,18 @@ const GithubAPI = () => {
     
   return (
     <React.Fragment>
-        <div className="container mx-auto">
+        <div className="container mx-auto ">
             <input type="text" className='border-2 rounded py-1' onChange={(e) =>{
                 setuserName(e.target.value);
             }}/>
             <button className='bg-violet-400 py-1 px-4 text-white mx-3 rounded' onClick={() =>{
-                setQuery(userName)
+                setQuery(userName);
             }}>Search</button>
+        </div>
+
+        <div>
+            <h2>{userData.name}</h2>
+            <img src={userData.avatar_url} alt="" width={100}/>
         </div>
 
 
