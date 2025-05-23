@@ -4,7 +4,6 @@ import GithubAPI from './Components/GithubAPI'
 const App = () => {
   return (
     <React.Fragment>
-      <h1 className='text-violet-400 font-semibold text-center text-4xl my-[24px]'>GitHub Username Search </h1>
       <GithubAPI />
     </React.Fragment>
   )
