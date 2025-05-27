@@ -1,9 +1,16 @@
-import React from 'react'
-import ToDo from './Components/ToDo'
+import SearchTask from "./Components/SearchTask"
+import ViewTask from "./Components/ViewTask"
+
+
 
 const App = () => {
   return (
-    <ToDo />
+    <div>
+      <SearchTask />
+      <ViewTask />
+    </div>
+    
+    
   )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ToDo = () => {
+const SearchTask = () => {
   return (
     <div>
       <h1 className='text-center text-2xl my-3'>✅ To Do List</h1>
@@ -27,4 +27,4 @@ const ToDo = () => {
   )
 }
 
-export default ToDo
+export default SearchTask
