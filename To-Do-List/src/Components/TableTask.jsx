@@ -1,17 +1,17 @@
 const Tabletask = ({ tasks, setTasks }) => {
     console.log(tasks);
-    
-
     const updateStatus = (id) =>{
         let updatedTask = tasks.map((task) =>{
             return task.id == id ? {...task , iscompleted : true } : task;
         })
         setTasks(updatedTask)
     }
+    
+
     return (
         <>
             <div className="container mx-auto mt-5">
-                <div className="w-8/12 mx-auto">
+                <div className="w-6/12 mx-auto">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500">
                         <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                             <tr>
@@ -33,7 +33,7 @@ const Tabletask = ({ tasks, setTasks }) => {
                                     ? <td className="px-6 py-4 text-green-600 font-semibold">
                                         Completed
                                         </td> 
-                                    : <td className="px-6 py-4 text-blue-600 font-semibold" onClick={() =>{
+                                    : <td className="px-6 py-4 text-yellow-500 font-semibold" onClick={() =>{
                                         updateStatus(task.id)
                                         }}>
                                         Pending

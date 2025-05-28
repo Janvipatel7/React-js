@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Tabletask from './TableTask';
 
 const Todo = () => {
@@ -6,6 +6,10 @@ const Todo = () => {
   const [text, setText] = useState("");
   const [task, setTask] = useState([]);
   const inputRef = useRef(null);
+  const [filter , setFilter] = useState("all");
+  const [filterTasks , setFilterTasks] = useState([]);
+  
+    
 
   const addTask = () => {
     if (text.trim() == "") {
@@ -22,6 +26,19 @@ const Todo = () => {
     setText("")
   }
 
+  useEffect(() =>{
+    let updated = []
+
+    if(filter == "all"){
+      updated = task;
+    }else if(filter == "pending"){
+      updated = task.filter((item) => !item.iscompleted);
+      console.log(updated);
+    }else {
+      updated = task.filter((item) => item.iscompleted);
+    }
+    setFilterTasks(updated)
+  }, [task , filter])
 
 
   return (
@@ -41,19 +58,26 @@ const Todo = () => {
           </form>
 
 
-          <div class="text-center rounded-md shadow-xs mt-5" role="group">
-            <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
-              Profile
+          <div className="text-center rounded-md shadow-xs mt-5" role="group">
+            <button onClick={() =>{
+              setFilter("all")
+            }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+              All
             </button>
-            <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
-              Settings
+            <button onClick={() =>{
+              setFilter("pending")
+            }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+              Pending
             </button>
-            <button type="button" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
-              Messages
+            <button onClick={() =>{
+              setFilter("completed")
+            }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+              Completed
             </button>
           </div>
 
-          <Tabletask tasks={task} setTasks={setTask} />
+          <Tabletask tasks={filterTasks} setTasks={setTask} />
+
         </div>
       </div>
     </>
