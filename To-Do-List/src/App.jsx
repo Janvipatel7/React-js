@@ -1,13 +1,12 @@
-import SearchTask from "./Components/SearchTask"
-import ViewTask from "./Components/ViewTask"
 
-
+import Tabletask from "./Components/TableTask"
+import Todo from "./Components/Todo"
 
 const App = () => {
   return (
     <div>
-      <SearchTask />
-      <ViewTask />
+      <Todo />
+      <Tabletask />
     </div>
     
     
