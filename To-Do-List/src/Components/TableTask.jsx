@@ -1,10 +1,17 @@
-import React from 'react'
+const Tabletask = ({ tasks, setTasks }) => {
+    console.log(tasks);
+    
 
-const Tabletask = () => {
+    const updateStatus = (id) =>{
+        let updatedTask = tasks.map((task) =>{
+            return task.id == id ? {...task , iscompleted : true } : task;
+        })
+        setTasks(updatedTask)
+    }
     return (
         <>
             <div className="container mx-auto mt-5">
-                <div className="w-6/12 mx-auto">
+                <div className="w-8/12 mx-auto">
                     <table className="w-full text-sm text-left rtl:text-right text-gray-500">
                         <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                             <tr>
@@ -17,14 +24,24 @@ const Tabletask = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="odd:bg-white even:bg-gray-50 border-b border-gray-200">
-                                <td className="px-6 py-4">
-                                    Silver
-                                </td>
-                                <td className="px-6 py-4">
-                                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                </td>
-                            </tr>
+                            {tasks.map((task) => {
+                                return <tr key={task.id} className="odd:bg-white even:bg-gray-50 border-b border-gray-200">
+                                    <th className="px-6 py-4">
+                                        {task.taskName}
+                                    </th>
+                                    {task.iscompleted 
+                                    ? <td className="px-6 py-4 text-green-600 font-semibold">
+                                        Completed
+                                        </td> 
+                                    : <td className="px-6 py-4 text-blue-600 font-semibold" onClick={() =>{
+                                        updateStatus(task.id)
+                                        }}>
+                                        Pending
+                                        </td>
+                                    }
+
+                                </tr>
+                            })}
                         </tbody>
                     </table>
                 </div>
