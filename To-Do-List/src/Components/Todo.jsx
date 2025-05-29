@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Tabletask from './TableTask';
 
 const Todo = () => {
@@ -7,15 +7,13 @@ const Todo = () => {
   const [task, setTask] = useState([]);
   const inputRef = useRef(null);
   const [filter , setFilter] = useState("all");
-  const [filterTasks , setFilterTasks] = useState([]);
   
-    
-
+  
+  
   const addTask = () => {
     if (text.trim() == "") {
       return;
     }
-
     const newTask = {
       id: Date.now(),
       taskName: text,
@@ -26,63 +24,52 @@ const Todo = () => {
     setText("")
   }
 
-  useEffect(() =>{
-    let updated = []
+  
 
-    if(filter == "all"){
-      updated = task;
-    }else if(filter == "pending"){
-      updated = task.filter((item) => !item.iscompleted);
-      console.log(updated);
-    }else {
-      updated = task.filter((item) => item.iscompleted);
-    }
-    setFilterTasks(updated)
-  }, [task , filter])
-
-
-  return (
+   return (
     <>
-      <h1 className="text-center mt-3 text-3xl font-semibold">Todo List</h1>
-      <div className="container mx-auto">
-        <div className="w-6/12 mx-auto">
-          <form className="flex items-center max-w-lg mx-auto">
-            <div className="flex mt-4 w-full">
-              <input ref={inputRef} onChange={(e) => {
-                setText(e.target.value)
-              }} type="text" id="voice-search" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-8/12 p-2.5" placeholder="Enter Your Tasks" required />
-              <button onClick={addTask} type="button" className="inline-flex items-center py-2.5 px-3 ms-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                Add Task
-              </button>
-            </div>
+      <h1 className="text-center mt-8 text-4xl font-bold text-[#262d75] drop-shadow-lg">Todo List</h1>
+      
+      <div className="container mx-auto mt-8">
+        <div className="w-full md:w-8/12 lg:w-6/12 mx-auto bg-white shadow-lg rounded-2xl p-6 border border-gray-200">
+
+          
+          <form className="flex items-center justify-between gap-2">
+            <input
+              ref={inputRef} onChange={(e) => setText(e.target.value)}
+              type="text" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5"
+              placeholder="Enter Your Task" required/>
+            <button
+              onClick={addTask}
+              type="button"
+              className="px-6 py-2 bg-[#ff6238] text-white font-semibold rounded-lg"
+            >
+              Add
+            </button>
           </form>
 
-
-          <div className="text-center rounded-md shadow-xs mt-5" role="group">
-            <button onClick={() =>{
-              setFilter("all")
-            }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+          
+          <div className="flex justify-center gap-4 mt-5">
+            <button onClick={() => setFilter("all")} className="px-4 py-2 bg-cyan-600 text-white rounded-lg font-semibold">
               All
             </button>
-            <button onClick={() =>{
-              setFilter("pending")
-            }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+            <button onClick={() => setFilter("pending")} className="px-4 py-2 bg-cyan-600 text-white rounded-lg font-semibold">
               Pending
             </button>
-            <button onClick={() =>{
-              setFilter("completed")
-            }} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+            <button onClick={() => setFilter("completed")} className="px-4 py-2 bg-cyan-600 text-white rounded-lg font-semibold">
               Completed
             </button>
           </div>
 
-          <Tabletask tasks={filterTasks} setTasks={setTask} />
+          
+          <div className="mt-6">
+            <Tabletask tasks={task} setTasks={setTask} filter={filter} />
+          </div>
 
         </div>
       </div>
     </>
+  );
+};
 
-  )
-}
-
-export default Todo
+export default Todo;

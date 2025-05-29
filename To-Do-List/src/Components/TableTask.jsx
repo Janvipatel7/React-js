@@ -1,53 +1,57 @@
-const Tabletask = ({ tasks, setTasks }) => {
-    console.log(tasks);
-    const updateStatus = (id) =>{
-        let updatedTask = tasks.map((task) =>{
-            return task.id == id ? {...task , iscompleted : true } : task;
+import { useEffect, useState } from "react";
+
+const TableTask = ({ tasks, setTasks, filter }) => {
+    const [filterTasks, setFilterTasks] = useState([]);
+    const updateStatus = (id) => {
+        let updatedTask = tasks.map((task) => {
+            return task.id == id ? { ...task, iscompleted: true } : task;
         })
         setTasks(updatedTask)
     }
-    
+
+    useEffect(() => {
+        let filterTask = tasks.filter((task) => {
+            return filter == "pending" ? !task.iscompleted : filter == "completed" ? task.iscompleted : true;
+        })
+        setFilterTasks(filterTask)
+    }, [tasks, filter])
+
+
 
     return (
-        <>
-            <div className="container mx-auto mt-5">
-                <div className="w-6/12 mx-auto">
-                    <table className="w-full text-sm text-left rtl:text-right text-gray-500">
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50">
-                            <tr>
-                                <th scope="col" className="px-6 py-3">
-                                    Tasks List
-                                </th>
-                                <th scope="col" className="px-6 py-3">
-                                    Action
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {tasks.map((task) => {
-                                return <tr key={task.id} className="odd:bg-white even:bg-gray-50 border-b border-gray-200">
-                                    <th className="px-6 py-4">
-                                        {task.taskName}
-                                    </th>
-                                    {task.iscompleted 
-                                    ? <td className="px-6 py-4 text-green-600 font-semibold">
-                                        Completed
-                                        </td> 
-                                    : <td className="px-6 py-4 text-yellow-500 font-semibold" onClick={() =>{
-                                        updateStatus(task.id)
-                                        }}>
-                                        Pending
-                                        </td>
-                                    }
+        <div className="mt-6">
+            {filterTasks.map((task) => (
+                <div
+                    key={task.id}
+                    className="flex justify-between items-center bg-white text-black border border-gray-300 rounded-lg px-4 py-3 mb-3 shadow-sm">
+                    <div className="flex items-center gap-3">
+                        <input
+                            type="checkbox"
+                            className="w-5 h-5 accent-blue-500"
+                            checked={task.iscompleted}
+                            onChange={() => updateStatus(task.id)}
+                        />
+                        <span className={`text-lg font-medium ${task.iscompleted ? "line-through text-gray-400" : ""}`}>
+                            {task.taskName}
+                        </span>
+                    </div>
 
-                                </tr>
-                            })}
-                        </tbody>
-                    </table>
+                    <div className="flex items-center gap-4">
+                        <span
+                            className={`text-sm font-semibold ${task.iscompleted ? "text-green-600" : "text-yellow-500 cursor-pointer"
+                                }`}
+                            onClick={() => !task.iscompleted && updateStatus(task.id)}
+                        >
+                            {task.iscompleted ? "Completed" : "Pending"}
+                        </span>
+
+                        
+                    </div>
                 </div>
-            </div>
-        </>
-    )
+            ))}
+        </div>
+    );
+
 }
 
-export default Tabletask
+export default TableTask
