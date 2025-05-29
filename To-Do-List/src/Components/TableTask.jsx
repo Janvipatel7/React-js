@@ -19,38 +19,39 @@ const TableTask = ({ tasks, setTasks, filter }) => {
 
 
     return (
-        <div className="mt-6">
-            {filterTasks.map((task) => (
-                <div
-                    key={task.id}
-                    className="flex justify-between items-center bg-white text-black border border-gray-300 rounded-lg px-4 py-3 mb-3 shadow-sm">
-                    <div className="flex items-center gap-3">
-                        <input
-                            type="checkbox"
-                            className="w-5 h-5 accent-blue-500"
-                            checked={task.iscompleted}
-                            onChange={() => updateStatus(task.id)}
-                        />
-                        <span className={`text-lg font-medium ${task.iscompleted ? "line-through text-gray-400" : ""}`}>
-                            {task.taskName}
-                        </span>
-                    </div>
+        <>
+            <div className="container mx-auto mt-5">
+                <div className="w-full mx-auto">
+                    <div className="w-full mx-auto overflow-x-auto mt-9">
+                        <div className="w-full text-sm text-left rtl:text-right text-gray-500">
+                            <div className="text-xs text-gray-700 uppercase bg-gray-50">
+                            </div>
+                            <div>
+                                {filterTasks.map((task) => {
+                                    return <div key={task.id} className="odd:bg-white flex items-center justify-between gap-3 pr-10 border my-4 rounded-lg even:bg-gray-50 border-b border-gray-200">
+                                        <div className="px-6 hello py-4 text-xl text-[#262d75] overflow-auto">
+                                            {task.taskName}
+                                        </div>
+                                        {task.iscompleted ?
+                                            <div className="text-center ">
+                                                <button className="cursor-pointer px-3 py-1 text-center text-white rounded bg-green-600  font-semibold"> Completed
+                                                </button> </div>
+                                            : <div className="text-center ">
+                                                <button className="cursor-pointer px-3 py-1 rounded text-center text-white font-semibold bg-yellow-500" onClick={() => {
+                                                    updateStatus(task.id)
+                                                }}>Pending</button>
+                                            </div>
+                                        }
 
-                    <div className="flex items-center gap-4">
-                        <span
-                            className={`text-sm font-semibold ${task.iscompleted ? "text-green-600" : "text-yellow-500 cursor-pointer"
-                                }`}
-                            onClick={() => !task.iscompleted && updateStatus(task.id)}
-                        >
-                            {task.iscompleted ? "Completed" : "Pending"}
-                        </span>
-
-                        
+                                    </div>
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </div>
-            ))}
-        </div>
-    );
+            </div>
+        </>
+    )
 
 }
 
