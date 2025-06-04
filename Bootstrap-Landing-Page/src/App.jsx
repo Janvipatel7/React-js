@@ -1,10 +1,13 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Components/Header';
+import MainSection from './Components/MainSection';
 const App = () => {
   return (
-    <div>App
-      <button className='btn btn-danger'>submit</button>
-    </div>
+    <>
+      <Header />
+      <MainSection />
+    </>
   )
 }
 
