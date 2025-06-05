@@ -1,8 +1,10 @@
-import React from 'react'
-
 const ImagePart = () => {
   return (
-    <div>ImagePart</div>
+      <>
+            <div className="hero-image">
+                <img src="/public/image/hero-1.png" alt="" className='img-fluid'/>
+            </div>
+    </>
   )
 }
 

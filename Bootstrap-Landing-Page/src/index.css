@@ -1,31 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.header{
-    background: rgba(238, 244, 245, 0.7);
+
+.header {
+    background: #e9f2f7;
     padding-block: 20px;
 }
-ul li{
+
+ul li {
     color: #0d3559;
-    font-weight: 500;
+    font-weight: 600;
     font-family: "Nunito", sans-serif;
 }
-.hero-section{
+
+.hero-section {
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: #DEEEFC;
     background-image: url("/public/Image/bg-light-first.png");
+    background-position: bottom center;
 }
-.fs-45{
+
+.fs-45 {
     font-size: 45px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     color: #222D39;
 }
-.hero-content p{
+
+.hero-content p {
     font-size: 18px;
     line-height: 30px;
     color: #677294;
+    font-family: "Nunito", sans-serif;
 }
-.primary-btn{
+
+.primary-btn {
     background: #4285F4;
     padding: 15px 30px;
     color: #ffffff;
@@ -34,4 +42,70 @@ ul li{
     display: inline-block;
     font-weight: 700;
     font-size: 18px;
+    font-family: "Nunito", sans-serif;
+}
+
+.black-btn {
+    background: #222D39;
+    padding: 15px 30px;
+    color: #ffffff;
+    border: none;
+    text-transform: capitalize;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+}
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.pb-100 {
+    padding-bottom: 100px;
+}
+
+.section-title h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
+    color: #222D39;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-title h2 span {
+    color: #4285F4;
+}
+
+.lines {
+    display: inline-block;
+    width: 100px;
+    height: 2px;
+    background-color: #3268fd !important;
+    position: relative;
+}
+
+.lines::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    background-color: #fff;
+    left: 40%;
+}
+.lines::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 2px;
+    background-color: #fff;
+    right: 40%;
+}
+.section-title p{
+    line-height: 1.7em;
+    font-size: 18px;
+    font-weight: 400;
+    color: #677294;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 20px;
 }

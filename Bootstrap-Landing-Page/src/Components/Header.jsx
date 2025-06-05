@@ -5,12 +5,12 @@ const Header = () => {
     <>
         <nav className='header'>
             <div className="container">
-                <div className='d-flex  justify-content-between align-items-center'>
+                <div className='d-flex justify-content-between align-items-center'>
                     <div>
                         <img src="public/Image/logo.png" alt="Logo" />
                     </div>
                     <div>
-                        <ul className='d-flex list-unstyled align-items-center gap-4 '>
+                        <ul className='d-flex list-unstyled gap-4 mt-3'>
                             <li>Home</li>
                             <li>Features</li>
                             <li>About</li>
