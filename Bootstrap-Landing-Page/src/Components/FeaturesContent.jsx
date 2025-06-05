@@ -1,13 +1,21 @@
-import React from 'react'
+
+import FeaturesInfo from './FeaturesInfo'
 import ImagePart from './ImagePart'
 
 const FeaturesContent = () => {
-    let img = "/public/image/hero-1.png"
+    let image = "/public/image/feature-image.png"
   return (
     <>
     <div className="container">
-        <div className="row">
-            <ImagePart image={img} />
+        <div className="row align-items-center">
+          <div className='col-5'>
+              <ImagePart img={image} alt="feature-img" className='img-fluid'/>
+          </div>
+          <div className='col-7'>
+              <div className='row'>
+                    <FeaturesInfo />
+              </div>
+          </div>
         </div>
     </div>
         

@@ -1,18 +1,13 @@
-import React from 'react'
 
-const AllSectionHeadline = () => {
+const AllSectionHeadline = ({title,highlight,des }) => {
   return (
     <>
       <div>
         <div className="section-title text-center mb60">
-          <h2>Amazing <span>Features</span></h2>
+          <h2>{title} <span>{highlight}</span></h2>
           <span className="lines"></span>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam <br></br>
-            nonummy nibh euismod tincidunt ut.
-          </p>
+          <p> {des}</p>
           </div>
-
       </div>
     </>
   )

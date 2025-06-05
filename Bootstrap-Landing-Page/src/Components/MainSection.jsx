@@ -1,8 +1,9 @@
 
 import ImageContent from './ImageContent'
 import ImagePart from './ImagePart'
-
 const MainSection = () => {
+  let image = "/public/image/hero-1.png"
+
   return (
     <>
       <section className='hero-section'>
@@ -12,7 +13,7 @@ const MainSection = () => {
                         <ImageContent />
                       </div>
                       <div className="col-6">
-                        <ImagePart />
+                        <ImagePart img={image}/>
                       </div>
                 </div>
             </div>
