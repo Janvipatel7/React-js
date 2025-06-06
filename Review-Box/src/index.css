@@ -11,3 +11,11 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.scrollbar-width{
+    scrollbar-width: none;
+}
+
+/* .box-shadow{
+    /* box-shadow: #b4857d;
+} */    
