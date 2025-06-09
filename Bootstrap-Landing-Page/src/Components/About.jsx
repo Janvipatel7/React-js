@@ -1,4 +1,4 @@
-import React from 'react'
+
 import AllSectionHeadline from './AllSectionHeadline';
 import AboutContent from './AboutContent';
 

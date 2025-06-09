@@ -1,19 +1,17 @@
 
-const ImageContent = () => {
+const ImageContent = ({heading , content , btn1 , btn2}) => {
   return (
     <>
-        
             <div className="hero-content">
                 <div className="mb-4">
-                    <h1 className="fs-45 text-capitalize">Sandy is best for</h1>
-                    <span className="fs-45 text-capitalize">Marketing your Apps.</span>
+                    <h1 className="fs-50 text-capitalize">{heading}</h1>
                 </div>
                 <div className="mb-5">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's typesetting industry standard dummy text ever since the typesetting.</p>
+                    <p>{content}</p>
                 </div>
                 <div className="d-flex gap-5">
-                    <button className="primary-btn">Download</button>
-                    <button className="black-btn">Read more</button>
+                    <button className="primary-btn">{btn1}</button>
+                    <button className="black-btn">{btn2}</button>
                 </div>
             </div>
     </>
