@@ -192,6 +192,12 @@ ul li {
     background: #346afe;
     color: white !important;
 }
+.about-box:hover .about-icon{
+    background: #346afe;
+    color: white;
+    -webkit-box-shadow: 0 0 0 7px rgba(0, 91, 234, 0.15);
+    box-shadow: 0 0 0 7px rgba(0, 91, 234, 0.15);
+}
 .how-works{
     position: relative;
     z-index: 1;
