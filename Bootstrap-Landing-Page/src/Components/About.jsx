@@ -14,7 +14,7 @@ const About = () => {
                 <div className="row">
                     <AllSectionHeadline title={title} highlight={highlight} des={des}/>
                 </div>
-                <div className='row'>
+                <div className='row gy-4'>
                     <AboutContent />
                 </div>
             </div>

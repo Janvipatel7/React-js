@@ -12,7 +12,7 @@ const FeaturesContent = () => {
               <ImagePart img={image} alt="feature-img" className='img-fluid'/>
           </div>
           <div className='col-7'>
-              <div className='row'>
+              <div className='row  gy-4'>
                     <FeaturesInfo />
               </div>
           </div>
