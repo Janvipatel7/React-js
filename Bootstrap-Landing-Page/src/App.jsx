@@ -6,6 +6,9 @@ import Features from './Components/Features';
 import About from './Components/About';
 import Intro from './Components/Intro';
 import Works from './Components/Works';
+import Screenshots from './Components/Screenshots.JSX';
+import SpecialFeatures from './Components/SpecialFeatures';
+
 const App = () => {
 
   return (
@@ -16,6 +19,8 @@ const App = () => {
       <About />
       <Intro />
       <Works />
+      <Screenshots />
+      <SpecialFeatures />
     </>
   )
 }
