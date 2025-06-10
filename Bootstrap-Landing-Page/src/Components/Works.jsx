@@ -6,25 +6,58 @@ const Works = () => {
     let des = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut."
 
     return (
-            <>
-                <section className='pb-100 pt-100 bg-light-blue'>
-                    <div className="container">
-                        <div className="row">
-                            <AllSectionHeadline title={title} highlight={highlight} des={des} />
-                        </div>
-                        <div className='row'>
-                            <div className="col-md-3">
-                                <div className='how-works'>
-                                    <div className='icon-box'>
+        <>
+            <section className='pb-100 pt-100 bg-light-blue'>
+                <div className="container">
+                    <div className="row">
+                        <AllSectionHeadline title={title} highlight={highlight} des={des} />
+                    </div>
+                    <div className='row ps-146'>
+                        <div className="col-3 p-0">
+                            <div className='afterLine'>
+                                <div className='how-works   '>
+                                    <div className='icon-box '>
                                         <i class="bi bi-person-add"></i>
                                     </div>
-                                    <h4>Add friends </h4>
                                 </div>
+                                <h4 className=''>Add friends</h4>
+                            </div>
+                        </div>
+                        <div className="col-3 p-0">
+                            <div className='afterLine'>
+                                <div className='how-works afterLine '>
+                                    <div className='icon-box'>
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                    </div>
+                                </div>
+                                <h4 className=''>Posts like</h4>
+                            </div>
+                        </div>
+                        <div className="col-3 p-0">
+                            <div className='afterLine'>
+                                <div className='how-works afterLine '>
+                                    <div className='icon-box'>
+                                        <i class="bi bi-envelope-open"></i>
+                                    </div>
+                                </div>
+
+                                <h4 className=''>Messageing</h4>
+                            </div>
+                        </div>
+                        <div className="col-3 p-0">
+                            <div className=''>
+                                <div className='how-works '>
+                                    <div className='icon-box'>
+                                        <i class="bi bi-airplane"></i>
+                                    </div>
+                                </div>
+                                <h4 className=''>Check in</h4>
                             </div>
                         </div>
                     </div>
-                </section>
-            </>
+                </div>
+            </section>
+        </>
     )
 }
 
