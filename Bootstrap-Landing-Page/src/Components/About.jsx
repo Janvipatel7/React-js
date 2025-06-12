@@ -3,7 +3,7 @@ import AllSectionHeadline from './AllSectionHeadline';
 import AboutContent from './AboutContent';
 
 const About = () => {
-    let title = "About " ;
+    let title = "About";
     let highlight = "Sandy";
     let des = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut."
 

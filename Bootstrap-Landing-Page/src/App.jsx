@@ -8,6 +8,12 @@ import Intro from './Components/Intro';
 import Works from './Components/Works';
 import Screenshots from './Components/Screenshots.JSX';
 import SpecialFeatures from './Components/SpecialFeatures';
+import AccordionScreen from './Components/AccordionScreen';
+import FactsSection from './Components/FactsSection';
+import Subscribe from './Components/Subscribe';
+import Video from './Components/Video';
+import Blog from './Components/Blog';
+import Contact from './Components/Contact';
 
 const App = () => {
 
@@ -21,6 +27,12 @@ const App = () => {
       <Works />
       <Screenshots />
       <SpecialFeatures />
+      <AccordionScreen />
+      <FactsSection />
+      <Subscribe />
+      <Video />
+      <Blog />
+      <Contact />
     </>
   )
 }
