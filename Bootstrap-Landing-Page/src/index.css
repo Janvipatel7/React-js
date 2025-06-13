@@ -10,6 +10,35 @@ ul li {
     font-weight: 600;
     font-family: "Nunito", sans-serif;
 }
+.hover-line {
+    position: relative;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+.hover-line:hover::after,.hover-line:hover::before{
+    width: 15px;
+}
+
+.hover-line:before {
+    background: #4285f4;
+    bottom: -5px;
+    content: "";
+    height: 1px;
+    position: absolute;
+    right: 0;
+    transition: all 0.3s ease 0s;
+    width: 0;
+}
+.hover-line:after {
+    background: #4285f4;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: -5px;
+    transition: all 0.3s ease 0s;
+    width: 0;
+}
 
 .container {
     max-width: 1100px !important;
@@ -40,7 +69,6 @@ ul li {
 
 .primary-btn {
     background: #4285F4;
-    ;
     padding: 15px 30px;
     color: #ffffff;
     border: none;
@@ -49,6 +77,10 @@ ul li {
     font-weight: 700;
     font-size: 18px;
     font-family: "Nunito", sans-serif;
+}
+.primary-btn:hover{
+    background: #0075F8;
+    color: #ffffff;
 }
 
 .black-btn {
@@ -61,6 +93,10 @@ ul li {
     font-weight: 700;
     font-size: 18px;
     font-family: "Nunito", sans-serif;
+}
+.black-btn:hover{
+    background: #677294;
+    color: #ffffff;
 }
 
 .pt-100 {
@@ -387,6 +423,12 @@ ul li {
     padding: .375rem .75rem;
     border: 1px solid #ced4da;
     border-radius: 3px;
+}
+.input-box:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #4285F4;
+    outline: 0;
 }
 
 .subscribe-content h4 {
