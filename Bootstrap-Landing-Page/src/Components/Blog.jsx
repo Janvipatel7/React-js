@@ -11,7 +11,27 @@ import 'swiper/css/scrollbar';
 const Blog = () => {
     let title = "Latest ";
     let highlight = "Blogs";
-    let des = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut."
+    let des = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.";
+    let sliderArr = [
+        {
+            imageClass:"image-1",
+        },
+        {
+            imageClass:"image-2",
+        },
+        {
+            imageClass:"image-3",
+        },
+        {
+            imageClass:"image-4",
+        },
+        {
+            imageClass:"image-5",
+        },
+        {
+            imageClass:"image-6",
+        },
+    ]
 
     return (
         <>
@@ -33,9 +53,10 @@ const Blog = () => {
                                     onSlideChange={() => console.log('slide change')}
                                     Autoplay={false}
                                 >
-                                    <SwiperSlide>
+                                   {sliderArr.map((nothing)=>{
+                                        return <SwiperSlide>
                                         <div className="blog-post">
-                                            <div className="blog-image">
+                                            <div className={`blog-image ${nothing.imageClass}`}>
                                                 <div className="blog-thumb-overlay">
                                                     <div className="blog-des">
                                                         Posted: 08-02-2024<br />
@@ -52,101 +73,7 @@ const Blog = () => {
                                             </div>
                                         </div>
                                     </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="blog-post">
-                                            <div className="blog-image">
-                                                <div className="blog-thumb-overlay">
-                                                    <div className="blog-des">
-                                                        Posted: 08-02-2024<br />
-                                                        Posted In: Creative , Design , Apps<br />
-                                                        Posted By: Sandy Blogger<br />
-                                                        10 Comments
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="post-content">
-                                                <h2>Modern Apps With Amazing Features</h2>
-                                                <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                                <button>Read more...</button>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="blog-post">
-                                            <div className="blog-image">
-                                                <div className="blog-thumb-overlay">
-                                                    <div className="blog-des">
-                                                        Posted: 08-02-2024<br />
-                                                        Posted In: Creative , Design , Apps<br />
-                                                        Posted By: Sandy Blogger<br />
-                                                        10 Comments
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="post-content">
-                                                <h2>Modern Apps With Amazing Features</h2>
-                                                <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                                <button>Read more...</button>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="blog-post">
-                                            <div className="blog-image">
-                                                <div className="blog-thumb-overlay">
-                                                    <div className="blog-des">
-                                                        Posted: 08-02-2024<br />
-                                                        Posted In: Creative , Design , Apps<br />
-                                                        Posted By: Sandy Blogger<br />
-                                                        10 Comments
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="post-content">
-                                                <h2>Modern Apps With Amazing Features</h2>
-                                                <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                                <button>Read more...</button>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="blog-post">
-                                            <div className="blog-image">
-                                                <div className="blog-thumb-overlay">
-                                                    <div className="blog-des">
-                                                        Posted: 08-02-2024<br />
-                                                        Posted In: Creative , Design , Apps<br />
-                                                        Posted By: Sandy Blogger<br />
-                                                        10 Comments
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="post-content">
-                                                <h2>Modern Apps With Amazing Features</h2>
-                                                <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                                <button>Read more...</button>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <div className="blog-post">
-                                            <div className="blog-image">
-                                                <div className="blog-thumb-overlay">
-                                                    <div className="blog-des">
-                                                        Posted: 08-02-2024<br />
-                                                        Posted In: Creative , Design , Apps<br />
-                                                        Posted By: Sandy Blogger<br />
-                                                        10 Comments
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="post-content">
-                                                <h2>Modern Apps With Amazing Features</h2>
-                                                <p>Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                                                <button>Read more...</button>
-                                            </div>
-                                        </div>
-                                    </SwiperSlide>
+                                   })}
                                 </Swiper>
                             </div>
                         </div>

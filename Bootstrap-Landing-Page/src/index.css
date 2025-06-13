@@ -531,12 +531,29 @@ ul li {
 }
 
 .blog-image {
-    background-image: url('/Image/blog-thumb-1.jpg');
     height: 250px;
     margin-bottom: 15px;
     background-size: cover;
     background-position: center center;
-
+    
+}
+.image-1{
+    background-image: url('/Image/blog-thumb-1.jpg');
+}
+.image-2{
+    background-image: url('/Image/blog-thumb-2.jpg');
+}
+.image-3{
+    background-image: url('/Image/blog-thumb-3.jpg');
+}
+.image-4{
+    background-image: url('/Image/blog-thumb-4.jpg');
+}
+.image-5{
+    background-image: url('/Image/blog-thumb-5.jpg');
+}
+.image-6{
+    background-image: url('/Image/blog-thumb-6.jpg');
 }
 
 .blog-image .thumb-overlay {
