@@ -13,7 +13,7 @@ const Header = () => {
                             <img src="public/Image/logo.png" alt="Logo" />
                         </div>
                         <div>
-                            <ul className='d-flex align-items-center list-unstyled gap-4 mt-3 d-none d-md-flex'>
+                            <ul className='d-flex align-items-center list-unstyled gap-4 mt-3 d-none d-lg-flex header-nav'>
                                 <li className='hover-line'>Home</li>
                                 <li className='hover-line'>Features</li>
                                 <li className='hover-line'>About</li>
@@ -23,7 +23,7 @@ const Header = () => {
                                 <li className='hover-line'>Contact</li>
                                 <li className='hover-line'>Subscribe</li>
                             </ul>
-                            <button className='bg-transparent d-flex d-md-none' >
+                            <button className='bg-transparent d-flex d-lg-none' >
                                 <i class="bi bi-list"></i>
                             </button>
                         </div>

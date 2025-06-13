@@ -8,10 +8,10 @@ const FeaturesContent = () => {
     <>
     <div className="container">
         <div className="row align-items-center">
-          <div className='col-5'>
+          <div className='col-lg-5'>
               <ImagePart img={image} alt="feature-img" className='img-fluid'/>
           </div>
-          <div className='col-7'>
+          <div className='col-lg-7'>
               <div className='row  gy-4'>
                     <FeaturesInfo />
               </div>

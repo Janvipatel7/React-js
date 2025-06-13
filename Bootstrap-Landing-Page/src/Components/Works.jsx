@@ -15,22 +15,22 @@ const Works = () => {
                     <div className='row ps-146'>
                         <div className="col-3 p-0">
                             <div className='afterLine'>
-                                <div className='how-works   '>
+                                <div className='how-works  text-start '>
                                     <div className='icon-box '>
                                         <i class="bi bi-person-add"></i>
                                     </div>
+                                     <h4>Add friends</h4>
                                 </div>
-                                <h4 className=''>Add friends</h4>
                             </div>
                         </div>
                         <div className="col-3 p-0">
                             <div className='afterLine'>
-                                <div className='how-works afterLine '>
+                                <div className='how-works '>
                                     <div className='icon-box'>
                                         <i class="bi bi-hand-thumbs-up"></i>
                                     </div>
+                                    <h4>Posts like</h4>
                                 </div>
-                                <h4 className=''>Posts like</h4>
                             </div>
                         </div>
                         <div className="col-3 p-0">
@@ -39,9 +39,8 @@ const Works = () => {
                                     <div className='icon-box'>
                                         <i class="bi bi-envelope-open"></i>
                                     </div>
+                                    <h4>Messageing</h4>
                                 </div>
-
-                                <h4 className=''>Messageing</h4>
                             </div>
                         </div>
                         <div className="col-3 p-0">
@@ -50,8 +49,8 @@ const Works = () => {
                                     <div className='icon-box'>
                                         <i class="bi bi-airplane"></i>
                                     </div>
+                                    <h4>Check in</h4>
                                 </div>
-                                <h4 className=''>Check in</h4>
                             </div>
                         </div>
                     </div>
