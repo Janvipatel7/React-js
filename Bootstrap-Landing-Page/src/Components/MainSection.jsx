@@ -13,10 +13,10 @@ const MainSection = () => {
       <section className='hero-section'>
             <div className="container">
                 <div className='row vh-100 align-items-center'>
-                      <div className="col-6">
+                      <div className="col-lg-6">
                         <ImageContent heading={heading} content={content} btn1={btn1} btn2={btn2}/>
                       </div>
-                      <div className="col-6">
+                      <div className="col-lg-6">
                         <ImagePart img={image}/>
                       </div>
                 </div>

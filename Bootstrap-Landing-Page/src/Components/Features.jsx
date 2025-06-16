@@ -12,9 +12,11 @@ const Features = () => {
         <section className='pt-100 pb-100'>
             <div className="container">
                 <div className="row">
-                    <AllSectionHeadline title={title} highlight={highlight} des={des}/>
+                    <div>
+                        <AllSectionHeadline title={title} highlight={highlight} des={des}/>
+                    </div>
                 </div>
-                <div className='row align-items-center'>
+                <div>
                     <FeaturesContent />
                 </div>
             </div>

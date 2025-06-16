@@ -18,6 +18,9 @@ ul li {
 .hover-line:hover::after,.hover-line:hover::before{
     width: 15px;
 }
+.hover-line:hover{
+    color: #4285f4;
+}
 
 .hover-line:before {
     background: #4285f4;
@@ -50,7 +53,7 @@ ul li {
     background-repeat: no-repeat;
     background-color: #DEEEFC;
     background-image: url("/public/Image/bg-light-first.png");
-    background-position: bottom center;
+    background-position: center bottom;
 }
 
 .fs-50 {
@@ -270,9 +273,9 @@ ul li {
 
 .afterLine::before {
     content: '';
-    border-color: black;
+    border-color: #0d3559;
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid #0d3559;
     position: absolute;
     top: 45px;
     right: 50%;
@@ -281,9 +284,9 @@ ul li {
 
 .afterLine::after {
     content: '';
-    border-color: #7591aa;
+    border-color: #0d3559;
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid #0d3559;
     position: absolute;
     top: 45px;
     right: 1px;
@@ -313,8 +316,8 @@ ul li {
 
 .how-works h4 {
     font-size: 22px;
-    font-weight: 300;
-    color: #222D39;
+    font-weight: 400;
+    color: #222D39 !important;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -632,4 +635,15 @@ ul li {
     font-weight: 500;
     color: #677294;
     margin-bottom: 15px;
+}
+
+@media (max-width: 992px) {
+    .header{
+        top: 0px;
+        padding: 10px 20px;
+    }
+    .fs-50 {
+        font-size: 36px;
+    }
+
 }

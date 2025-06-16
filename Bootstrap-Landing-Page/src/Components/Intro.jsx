@@ -14,10 +14,10 @@ const Intro = () => {
             <section className='pb-100 pt-100'>
                 <div className="container ">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-lg-6">
                             <ImagePart img={image} />
                         </div>
-                        <div className="col-6">
+                        <div className="col-lg-6">
                             <div className='d-flex align-items-center h-100'>
                                 <ImageContent heading={heading} content={content} btn1={btn1} btn2={btn2} />
                             </div>
