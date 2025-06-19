@@ -1,25 +1,31 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 
-const Login = () => {
-    const[input , setInput] = useState({
-        email:"" , password:""
+const Login = ({ setIsLoggedin }) => {
+    const [input, setInput] = useState({
+        email: "", password: ""
     })
 
+    const navigate = useNavigate()
+
     const handleChange = (e) => {
-        setInput({... input , [e.target.id] : e.target.value})
+        setInput({ ...input, [e.target.id]: e.target.value })
     }
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if(input.email == "admin@gmail.com" && input.password == "admin@123"){
+        if (input.email == "admin@gmail.com" && input.password == "admin@123") {
+            localStorage.setItem("isLoggedin", JSON.stringify(true))
+            setIsLoggedin(true)
+            navigate("/employess")
             toast.success("Logged In Succesfully..")
-        }else{
+        } else {
             toast.error("Email Or Password Not Valid!!!!")
         }
     }
-    
+
     return (
         <>
             <section className="bg-gray-50">
@@ -39,14 +45,6 @@ const Login = () => {
                                     <input onChange={handleChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600  block w-full p-2.5 " required />
                                 </div>
                                 <div className="flex items-center justify-between">
-                                    <div className="flex items-start">
-                                        <div className="flex items-center h-5">
-                                            <input id="remember" aria-describedby="remember" type="checkbox" className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-teal-600" required />
-                                        </div>
-                                        <div className="ml-3 text-sm">
-                                            <label htmlFor="remember" className="text-gray-900">Remember me</label>
-                                        </div>
-                                    </div>
                                     <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-teal-600">Forgot password?</a>
                                 </div>
 
