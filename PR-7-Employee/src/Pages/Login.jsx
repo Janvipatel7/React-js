@@ -1,12 +1,23 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify'
 
 const Login = () => {
-    const[input , setinput] = useState({
-        email:'' , password:''
+    const[input , setInput] = useState({
+        email:"" , password:""
     })
 
-    const handlChange = () =>{
-        setinput({... input , [e.target.id] : e.target.value})
+    const handleChange = (e) => {
+        setInput({... input , [e.target.id] : e.target.value})
+    }
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if(input.email == "admin@gmail.com" && input.password == "admin@123"){
+            toast.success("Logged In Succesfully..")
+        }else{
+            toast.error("Email Or Password Not Valid!!!!")
+        }
     }
     
     return (
@@ -18,14 +29,14 @@ const Login = () => {
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
                                 Sign in to your account
                             </h1>
-                            <form className="space-y-4 md:space-y-6" action="#">
+                            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                                    <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 " placeholder="name@company.com" required />
+                                    <input onChange={handleChange} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 " placeholder="name@company.com" required />
                                 </div>
                                 <div>
                                     <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
-                                    <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600  block w-full p-2.5 " required />
+                                    <input onChange={handleChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600  block w-full p-2.5 " required />
                                 </div>
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-start">
