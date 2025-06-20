@@ -45,13 +45,12 @@ const Login = ({ setIsLoggedin }) => {
                                     <input onChange={handleChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600  block w-full p-2.5 " required />
                                 </div>
                                 <div className="flex items-center justify-between">
-                                    <a href="#" className="text-sm font-medium text-primary-600 hover:underline dark:text-teal-600">Forgot password?</a>
+                                    <a href="#" className="text-sm font-medium text-teal-600 hover:underline dark:text-teal-600">Forgot password?</a>
                                 </div>
 
                                 <div className="flex items-center justify-between">
                                 </div>
                                 <button type="submit" className="w-full text-white bg-teal-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
-
                             </form>
                         </div>
                     </div>

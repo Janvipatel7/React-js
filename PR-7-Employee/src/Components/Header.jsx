@@ -1,10 +1,12 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify";
 
 
 const Header = ({ isLoggedin, setIsLoggedin }) => {
 
     const navigate = useNavigate();
+
+    const { pathname } = useLocation();
 
     const handleClick = () => {
         setIsLoggedin(false);
@@ -32,16 +34,19 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
                         <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
                             <li>
-                                <Link to={"/"} className="block py-2 px-3 text-white bg-teal-600 rounded-sm md:bg-transparent md:text-teal-600 md:p-0" aria-current="page">Home</Link>
+                                <Link to={"/"}  className={`${pathname == "/" ? " text-teal-600 " : "text-gray-900 " }`}>Home</Link>
                             </li>
                             <li>
-                                <Link to={"/about"} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-600 md:p-0">About</Link>
+                                <Link to={"/about"} className={`${pathname == "/about" ? " text-teal-600 " : "text-gray-900 " }`}>About</Link>
                             </li>
                             <li>
-                                <Link to={"/contact"} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-600 md:p-0">Contact</Link>
+                                <Link to={"/contact"} className={`${pathname == "/contact" ? " text-teal-600 " : "text-gray-900 " }`}>Contact</Link>
                             </li>
+                            {
+                                isLoggedin && (<Link to={"/employess"} className={`${pathname == "/employess" || pathname == "add-employess" ? " text-teal-600 " : "text-gray-900 " }`}>Employess</Link>)
+                            }
                             <li>
-                                <Link to={"/employess"} className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-teal-600 md:p-0">Employess</Link>
+                                
                             </li>
                         </ul>
                     </div>
