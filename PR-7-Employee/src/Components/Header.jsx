@@ -43,7 +43,7 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                                 <Link to={"/contact"} className={`${pathname == "/contact" ? " text-teal-600 " : "text-gray-900 " }`}>Contact</Link>
                             </li>
                             {
-                                isLoggedin && (<Link to={"/employess"} className={`${pathname == "/employess" || pathname == "add-employess" ? " text-teal-600 " : "text-gray-900 " }`}>Employess</Link>)
+                                isLoggedin && (<Link to={"/employess"} className={`${pathname == "/employess" || pathname == "/add-employess" ? " text-teal-600 " : "text-gray-900 " }`}>Employess</Link>)
                             }
                             <li>
                                 

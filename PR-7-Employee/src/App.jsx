@@ -7,7 +7,6 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Login from './Pages/Login'
 import { useEffect, useState } from 'react';
-
 import 'remixicon/fonts/remixicon.css'
 import Employess from './Pages/Employess';
 import AddEmployess from './Pages/AddEmployess';
