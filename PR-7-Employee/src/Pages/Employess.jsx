@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import EmployessTable from '../Components/EmployessTable'
 import { useNavigate } from 'react-router-dom'
 
 const Employess = () => {
     const navigate = useNavigate();
+    const [employees , setEmployees] = useState([]);
+
+    useEffect(() => {
+        const data = JSON.parse(localStorage.getItem("employees")) || [];
+        setEmployees(data);
+    }, [])
     return (
         <>
             <section>
@@ -15,7 +21,7 @@ const Employess = () => {
                         </button>
                     </div>
                     <div>
-                        <EmployessTable />
+                        <EmployessTable employees={employees}/>
                     </div>
                 </div>
             </section>

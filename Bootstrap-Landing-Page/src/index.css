@@ -636,6 +636,119 @@ ul li {
     color: #677294;
     margin-bottom: 15px;
 }
+.bg-black {
+    background: #222328a9;
+}
+.social-icon{
+    margin-bottom: 30px;
+}
+.social-icon ul li {
+    display: inline;
+}
+.social-icon ul li span{
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    border: 1px dashed #ccc !important;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+}
+.social-icon ul li span:hover {
+    color: #ffffff;
+}
+.facebook span{
+    color: #4867AA;
+}
+.facebook span:hover {
+    background: #4867AA;
+}
+.twitter span{
+    color: #1DA1F2;
+}
+.twitter span:hover {
+    background: #1DA1F2;
+}
+.google-plus span{
+    color: #DD4D42;
+}
+.google-plus span:hover {
+    background: #DD4D42;
+}
+.youtube span{
+    color: #DF2926;
+}
+.youtube span:hover {
+    background: #DF2926;
+}
+.linked-in span{
+    color: #007BB6;
+}
+.linked-in span:hover {
+    background: #007BB6;
+}
+.instagram span{
+    color: #A823D1;
+}
+.instagram span:hover {
+    background: #A823D1;
+}
+.pinterest span{
+    color: #BD081C;
+}
+.pinterest span:hover {
+    background: #BD081C;
+}
+.dribbble span{
+    color: #EA4C89;
+}
+.dribbble span:hover {
+    background: #EA4C89;
+}
+.behance span{
+    color: #0B7CFF;
+}
+.behance span:hover {
+    background: #0B7CFF;
+}
+.footer-sandy{
+    color: #4285F4;
+}
+.copyright{
+        font-family: 'Nunito', sans-serif;
+}
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 30px;
+}
+.scroll-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 20px;
+    bottom: -15px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 900;
+    height: 40px;
+    width: 38px;
+    line-height: 35px;
+    text-align: center; 
+    border-radius: 2px;
+    transition: all 0.4s;
+    background: #346AFE;
+    color: white;
+}
+.scroll-top:hover{
+    background: #DEEEFC;
+    color: #0d3559;
+    border: 1px dashed #346AFE;
+}
+
 
 @media (max-width: 992px) {
     .header{

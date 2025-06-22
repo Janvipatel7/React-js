@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 
 
-const EmployessTable = () => {
+const EmployessTable = ({ employees }) => {
+    
   return (
     <>
       <section>
@@ -28,24 +29,28 @@ const EmployessTable = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr className="odd:bg-white  even:bg-gray-50  border-gray-200 text-sm">
-                  <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Apple MacBook Pro 17"
-                  </th>
-                  <td className="px-6 py-4 text-gray-900 font-medium">
-                    Silver
-                  </td>
-                  <td className="px-6 py-4 text-gray-900 font-medium">
-                    Laptop
-                  </td>
-                  <td className="px-6 py-4 text-gray-900 font-medium">
-                    $2999
-                  </td>
-                  <td className="px-6 py-4 text-gray-900 font-medium flex gap-6">
-                    <Link href="#" className="font-medium text-blue-600  hover:underline">Edit</Link>
-                    <Link href="#" className="font-medium text-red-600  hover:underline">Delete</Link>
-                  </td>
-                </tr>
+                {
+                  employees.map((emp, idx) => {
+                    return <tr class="odd:bg-white  even:bg-gray-50  border-gray-200">
+                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        {idx + 1}
+                      </th>
+                      <td class="px-6 py-4 text-gray-900">
+                        {emp.name}
+                      </td>
+                      <td class="px-6 py-4 text-gray-900">
+                        {emp.salary}
+                      </td>
+                      <td class="px-6 py-4 text-gray-900">
+                        {emp.department == 1 ? "Designing" : emp.department == 2 ? "Development" : emp.department == 3 ? "Finance" : "Sales and Marketing"}
+                      </td>
+                      <td class="px-6 py-4 text-gray-900 flex  gap-7">
+                        <Link className="font-medium text-green-600">Edit</Link>
+                        <button className="font-medium text-red-600">Delete</button>
+                      </td>
+                    </tr>
+                  })
+                }
               </tbody>
             </table>
           </div>

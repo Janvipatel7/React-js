@@ -14,6 +14,7 @@ import Subscribe from './Components/Subscribe';
 import Video from './Components/Video';
 import Blog from './Components/Blog';
 import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 const App = () => {
 
@@ -33,6 +34,7 @@ const App = () => {
       <Video />
       <Blog />
       <Contact />
+      <Footer />
     </>
   )
 }
