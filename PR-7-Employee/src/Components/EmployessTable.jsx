@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom"
 
 
-const EmployessTable = ({ employees }) => {
-    
+const EmployessTable = ({ employees , deleteEmployee}) => {
+
+  const handleDelete = (id) => {
+    deleteEmployee(id)
+  }
+
   return (
     <>
       <section>
@@ -31,22 +35,22 @@ const EmployessTable = ({ employees }) => {
               <tbody>
                 {
                   employees.map((emp, idx) => {
-                    return <tr class="odd:bg-white  even:bg-gray-50  border-gray-200">
-                      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    return <tr key={emp.id} className="odd:bg-white  even:bg-gray-50  border-gray-200">
+                      <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                         {idx + 1}
                       </th>
-                      <td class="px-6 py-4 text-gray-900">
+                      <td className="px-6 py-4 text-gray-900">
                         {emp.name}
                       </td>
-                      <td class="px-6 py-4 text-gray-900">
-                        {emp.salary}
+                      <td className="px-6 py-4 text-gray-900">
+                        $ {emp.salary}
                       </td>
-                      <td class="px-6 py-4 text-gray-900">
+                      <td className="px-6 py-4 text-gray-900">
                         {emp.department == 1 ? "Designing" : emp.department == 2 ? "Development" : emp.department == 3 ? "Finance" : "Sales and Marketing"}
                       </td>
-                      <td class="px-6 py-4 text-gray-900 flex  gap-7">
-                        <Link className="font-medium text-green-600">Edit</Link>
-                        <button className="font-medium text-red-600">Delete</button>
+                      <td className="px-6 py-4 text-gray-900 flex  gap-7">
+                        <Link to={`/edit-employee/${emp.id}`} className="font-medium text-green-600">Edit</Link>
+                        <button className="font-medium text-red-600" onClick={() =>handleDelete(emp.id)}>Delete</button>
                       </td>
                     </tr>
                   })

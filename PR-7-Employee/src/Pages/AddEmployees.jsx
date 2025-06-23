@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const AddEmployess = () => {
+const AddEmployees = () => {
     const [input, setInput] = useState({
         name: "", salary: "", department: ""
     });
@@ -32,7 +32,7 @@ const AddEmployess = () => {
 
         localStorage.setItem("employees", JSON.stringify(employees));
         setInput({ name: "", salary: "", department: "" });
-        navigate("/employess");
+        navigate("/employees");
         console.log(employees);
     };
 
@@ -97,4 +97,4 @@ const AddEmployess = () => {
     )
 }
 
-export default AddEmployess;
+export default AddEmployees;
