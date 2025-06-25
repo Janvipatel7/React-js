@@ -9,9 +9,10 @@ import Login from './Pages/Login'
 import { useEffect, useState } from 'react';
 import 'remixicon/fonts/remixicon.css'
 import ProtectedRoute from './Components/ProtectedRoute';
-import { EditEmiployee } from './Pages/EditEmiployee';
+import EditEmployees from './Pages/EditEmployees';
 import Employees from './Pages/Employees';
 import AddEmployees from './Pages/AddEmployees';
+import 'remixicon/fonts/remixicon.css'
 
 const App = () => {
   const [isLoggedin , setIsLoggedin] = useState(false)
@@ -32,7 +33,7 @@ const App = () => {
               <Route path='/login' element={<Login setIsLoggedin={setIsLoggedin}/>}/>
               <Route path='/employees' element={<ProtectedRoute  Component={Employees}/>}/>
               <Route path='/add-employees' element={<ProtectedRoute  Component={AddEmployees}/>}/>
-              <Route path='edit-employee/:id' element={<ProtectedRoute Component={EditEmiployee}/>}/>
+              <Route path='edit-employee/:id' element={<ProtectedRoute Component={EditEmployees}/>}/>
           </Routes>
           <ToastContainer />
       </BrowserRouter>

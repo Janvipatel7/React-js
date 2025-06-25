@@ -19,7 +19,7 @@ const Login = ({ setIsLoggedin }) => {
         if (input.email == "admin@gmail.com" && input.password == "admin@123") {
             localStorage.setItem("isLoggedin", JSON.stringify(true))
             setIsLoggedin(true)
-            navigate("/employess")
+            navigate("/employees")
             toast.success("Logged In Succesfully..")
         } else {
             toast.error("Email Or Password Not Valid!!!!")
@@ -28,34 +28,50 @@ const Login = ({ setIsLoggedin }) => {
 
     return (
         <>
-            <section className="bg-gray-50">
-                <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                    <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
-                        <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-                            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
-                                Sign in to your account
-                            </h1>
-                            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
-                                <div>
-                                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
-                                    <input onChange={handleChange} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600 block w-full p-2.5 " placeholder="name@company.com" required />
-                                </div>
-                                <div>
-                                    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 ">Password</label>
-                                    <input onChange={handleChange} type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-teal-600 focus:border-teal-600  block w-full p-2.5 " required />
-                                </div>
-                                <div className="flex items-center justify-between">
-                                    <a href="#" className="text-sm font-medium text-teal-600 hover:underline dark:text-teal-600">Forgot password?</a>
-                                </div>
+            <section className="bg-[#d4eeff] min-h-screen flex items-center justify-center px-4 py-12">
+                <div className="w-full max-w-md bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div className="px-8 py-10">
+                        <h1 className="text-2xl font-extrabold text-[#081d45] mb-6 text-center">
+                            Sign in
+                        </h1>
 
-                                <div className="flex items-center justify-between">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-semibold text-[#081d45] mb-2">
+                                    Your email
+                                </label>
+                                <input onChange={handleChange}
+                                    type="email"  name="email"  id="email"  placeholder="name@company.com"   required
+                                    className="w-full px-4 py-3 text-sm border border-blue-300 rounded-xl focus:ring-1 focus:ring-blue-500 focus:outline-none"
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="password" className="block text-sm font-semibold text-[#081d45] mb-2">
+                                    Password
+                                </label>
+                                <input onChange={handleChange}
+                                    type="password"  name="password" id="password"  placeholder="••••••••"   required
+                                    className="w-full px-4 py-3 text-sm border border-blue-300 rounded-xl focus:ring-1 focus:ring-blue-500 focus:outline-none"
+                                />
+                            </div>
+                            <div className="text-left">
+                                <a href="#" className="text-sm font-medium text-blue-500 hover:underline">
+                                    Forgot password?
+                                </a>
+                            </div>
+                            <button
+                                type="submit"
+                                className="w-full flex items-center justify-center gap-3 bg-gradient-to-br from-blue-600 to-blue-800 text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transition">
+                                <span className="tracking-wider">SIGN IN</span>
+                                <div className="w-12 h-8 flex items-center justify-center rounded-xl bg-[#020c39]">
+                                    <i className="ri-arrow-right-up-line text-white text-lg"></i>
                                 </div>
-                                <button type="submit" className="w-full text-white bg-teal-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
-                            </form>
-                        </div>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>
+
 
         </>
     )

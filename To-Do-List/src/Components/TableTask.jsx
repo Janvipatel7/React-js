@@ -34,7 +34,7 @@ const TableTask = ({ tasks, setTasks, filter }) => {
                                         </div>
                                         {task.iscompleted ?
                                             <div className="text-center ">
-                                                <button className="cursor-pointer px-3 py-1 text-center text-white rounded bg-green-600  font-semibold"> Completed
+                                                <button className="cursor-pointer px-3 py-1 text-center text-white rounded bg-green-500  font-semibold"> Completed
                                                 </button> </div>
                                             : <div className="text-center ">
                                                 <button className="cursor-pointer px-3 py-1 rounded text-center text-white font-semibold bg-yellow-500" onClick={() => {

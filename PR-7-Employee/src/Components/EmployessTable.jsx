@@ -13,7 +13,7 @@ const EmployessTable = ({ employees , deleteEmployee}) => {
         <div className="container mx-auto">
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
-              <thead className="text-md text-gray-700 uppercase bg-gray-50">
+              <thead className="text-md text-white bg-[#172b6ff0]">
                 <tr>
                   <th scope="col" className="px-6 py-3">
                     Number
@@ -48,9 +48,13 @@ const EmployessTable = ({ employees , deleteEmployee}) => {
                       <td className="px-6 py-4 text-gray-900">
                         {emp.department == 1 ? "Designing" : emp.department == 2 ? "Development" : emp.department == 3 ? "Finance" : "Sales and Marketing"}
                       </td>
-                      <td className="px-6 py-4 text-gray-900 flex  gap-7">
-                        <Link to={`/edit-employee/${emp.id}`} className="font-medium text-green-600">Edit</Link>
-                        <button className="font-medium text-red-600" onClick={() =>handleDelete(emp.id)}>Delete</button>
+                      <td className="px-6 py-4 text-gray-900 flex text-xl gap-7">
+                        <Link to={`/edit-employee/${emp.id}`} className="font-medium text-green-600">
+                          <i class="ri-edit-box-line"></i>
+                        </Link>
+                        <button className="font-medium text-red-600" onClick={() =>handleDelete(emp.id)}>
+                            <i class="ri-delete-bin-line"></i>
+                        </button>
                       </td>
                     </tr>
                   })

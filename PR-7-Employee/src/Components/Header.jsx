@@ -23,53 +23,65 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
 
     return (
         <>
-            <nav className="bg-white border-gray-200">
+            <nav className="bg-[#D9F1FF]">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <Link to={'/'} className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap">Flowbite</span>
+                    <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="/Images/logo.svg" alt="icon" className="w-40 pt-3" />
                     </Link>
-                    <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-default" aria-expanded="false">
+
+                    <button
+                        data-collapse-toggle="navbar-default"
+                        type="button"
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                        aria-controls="navbar-default"
+                        aria-expanded="false"
+                    >
                         <span className="sr-only">Open main menu</span>
                     </button>
+
                     <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
                             <li>
-                                <Link to={"/"}  className={`${pathname == "/" ? " text-teal-600 " : "text-gray-900 " }`}>Home</Link>
+                                <Link to="/" className={`${pathname == "/" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Home</Link>
                             </li>
                             <li>
-                                <Link to={"/about"} className={`${pathname == "/about" ? " text-teal-600 " : "text-gray-900 " }`}>About</Link>
+                                <Link to="/about" className={`${pathname == "/about" ? "text-[#214ebe]" : "text-[#010e37]"}`}>About</Link>
                             </li>
                             <li>
-                                <Link to={"/contact"} className={`${pathname == "/contact" ? " text-teal-600 " : "text-gray-900 " }`}>Contact</Link>
+                                <Link to="/contact" className={`${pathname == "/contact" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Contact</Link>
                             </li>
                             {
-                                isLoggedin && (<Link to={"/employees"} className={`${pathname == "/employees" || pathname == "/add-employees" || pathname.includes("/edit-employee") ? " text-teal-600 " : "text-gray-900 " }`}>Employess</Link>)
+                                isLoggedin && (
+                                    <li>
+                                        <Link to="/employees" className={`${pathname === "/employees" || pathname === "/add-employees" || pathname.includes("/edit-employee") ? "text-[#214ebe]" : "text-[#010e37]"}`}>Employees</Link>
+                                    </li>
+                                )
                             }
-                            <li>
-                                
-                            </li>
                         </ul>
                     </div>
+
                     {
                         isLoggedin ? (
-                            <button
-                                onClick={handleClick}
-                                type="button"
-                                className="text-white bg-teal-600 hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center">
-                                Logout
+                            <button onClick={handleClick}
+                                type="button" className="flex items-center justify-between gap-4 px-3 py-2 bg-[#010e37] text-white font-semibold rounded-2xl border border-blue-500 shadow-md hover:shadow-lg transition duration-300">
+                                <span>Logout</span>
+                                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-700">
+                                    <i className="ri-arrow-right-up-line text-white text-lg"></i>
+                                </div>
                             </button>
                         ) : (
-                            <button
-                                onClick={handleLogin}
-                                type="button"
-                                className="text-white bg-teal-600 hover:bg-teal-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-6 py-2 text-center">
-                                Login
+                            <button onClick={handleLogin}
+                                type="button" className="flex items-center justify-between gap-4 px-3 py-2 bg-[#010e37] text-white font-semibold rounded-2xl border border-blue-500 shadow-md hover:shadow-lg transition duration-300">
+                                <span>Login</span>
+                                <div className="w-9 h-9 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-700">
+                                    <i className="ri-arrow-right-up-line text-white text-lg"></i>
+                                </div>
                             </button>
                         )
                     }
-
                 </div>
             </nav>
+           
         </>
     )
 }
