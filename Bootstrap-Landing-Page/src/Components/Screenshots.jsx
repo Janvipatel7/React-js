@@ -31,68 +31,99 @@ const Screenshots = () => {
                                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                                 spaceBetween={50}
                                 slidesPerView={3}
-                                navigation
-                                pagination={{ clickable: true }}
                                 onSwiper={(swiper) => console.log(swiper)}
                                 onSlideChange={() => console.log('slide change')}
                                 Autoplay={false}
                             >
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid'/>
-                                    </div>
-                                </SwiperSlide>
-                                 <SwiperSlide>
-                                    <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
                                 <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
-                                 <SwiperSlide>
+                                <SwiperSlide>
                                     <div className='shot-item'>
-                                        <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid'/>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
                                     </div>
                                 </SwiperSlide>
-                            
+                                <SwiperSlide>
+                                    <div className='shot-item'>
+                                        <span className='overlay'>
+                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <i class="bi bi-camera item-content"></i>
+                                        </span>
+                                    </div>
+                                </SwiperSlide>
+
                             </Swiper>
                         </div>
                     </div>
