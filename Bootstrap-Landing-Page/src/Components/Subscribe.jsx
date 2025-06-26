@@ -25,19 +25,19 @@ const Subscribe = () => {
                                 <h4 className='mb-3'>Download SANDY from your flatform</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
                                 <div className='apps-btn me-4'>
-                                    <i class="bi bi-apple"></i>
+                                    <i className="bi bi-apple"></i>
                                     <i> Get now
                                         <span>App store</span>
                                     </i>
                                 </div>
                                 <div className='apps-btn me-4'>
-                                    <i class="bi bi-android2"></i>
+                                    <i className="bi bi-android2"></i>
                                     <i> Get now
                                         <span>App store</span>
                                     </i>
                                 </div>
                                 <div className='apps-btn me-4'>
-                                    <i class="bi bi-windows"></i>
+                                    <i className="bi bi-windows"></i>
                                     <i> Get now
                                         <span>App store</span>
                                     </i>

@@ -50,7 +50,7 @@ const Blog = () => {
                                  
                                     onSwiper={(swiper) => console.log(swiper)}
                                     onSlideChange={() => console.log('slide change')}
-                                    Autoplay={false}
+                                    autoPlay={true}
                                 >
                                    {sliderArr.map((nothing)=>{
                                         return <SwiperSlide>

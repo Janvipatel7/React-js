@@ -12,7 +12,7 @@ const Video = () => {
                                 <h2>Sandy is very easy to use.</h2>
                                 <p className='mb-5'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's typesetting industry standard dummy text ever since the typesetting.</p>
                                 <button className='video-btn'>
-                                   <i class="bi bi-play-fill"></i>
+                                   <i className="bi bi-play-fill"></i>
                                 </button>
                             </div>
                         </div>

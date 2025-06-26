@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const Header = () => {
@@ -28,13 +27,10 @@ const Header = () => {
                                 <li className='hover-line'>Subscribe</li>
                             </ul>
                             <button className='bg-transparent d-flex d-lg-none' onClick={handleShow} >
-                                <i class="bi bi-list"></i>
+                                <i className="bi bi-list"></i>
                             </button>
                         </div>
-                        {/* <Button variant="primary" onClick={handleShow}>
-                                Launch
-                            </Button> */}
-
+                        
                     </div>
                 </div>
             </nav>

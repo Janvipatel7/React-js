@@ -1,9 +1,6 @@
-import ImageContent from "./ImageContent"
+
 
 const SpecialFeatures = () => {
-    
-    
-
 
     return (
         <>

@@ -17,7 +17,7 @@ const Works = () => {
                             <div className='afterLine'>
                                 <div className='how-works  text-start '>
                                     <div className='icon-box '>
-                                        <i class="bi bi-person-add"></i>
+                                        <i className="bi bi-person-add"></i>
                                     </div>
                                      <h4>Add friends</h4>
                                 </div>
@@ -27,7 +27,7 @@ const Works = () => {
                             <div className='afterLine'>
                                 <div className='how-works '>
                                     <div className='icon-box'>
-                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <i className="bi bi-hand-thumbs-up"></i>
                                     </div>
                                     <h4>Posts like</h4>
                                 </div>
@@ -37,7 +37,7 @@ const Works = () => {
                             <div className='afterLine'>
                                 <div className='how-works afterLine '>
                                     <div className='icon-box'>
-                                        <i class="bi bi-envelope-open"></i>
+                                        <i className="bi bi-envelope-open"></i>
                                     </div>
                                     <h4>Messageing</h4>
                                 </div>
@@ -47,7 +47,7 @@ const Works = () => {
                             <div className=''>
                                 <div className='how-works '>
                                     <div className='icon-box'>
-                                        <i class="bi bi-airplane"></i>
+                                        <i className="bi bi-airplane"></i>
                                     </div>
                                     <h4>Check in</h4>
                                 </div>

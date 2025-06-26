@@ -1,27 +1,30 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header';
-import MainSection from './Components/MainSection';
-import Features from './Components/Features';
-import About from './Components/About';
-import Intro from './Components/Intro';
-import Works from './Components/Works';
-import Screenshots from './Components/Screenshots.JSX';
-import SpecialFeatures from './Components/SpecialFeatures';
-import AccordionScreen from './Components/AccordionScreen';
-import FactsSection from './Components/FactsSection';
-import Subscribe from './Components/Subscribe';
-import Video from './Components/Video';
-import Blog from './Components/Blog';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
+import Header from './components/Header';
+import MainSection from './components/MainSection';
+import Features from './components/Features';
+import Intro from './components/Intro';
+import Works from './components/Works';
+import Screenshots from './components/Screenshots.JSX';
+import SpecialFeatures from './components/SpecialFeatures';
+import AccordionScreen from './components/AccordionScreen';
+import FactsSection from './components/FactsSection';
+import Subscribe from './components/Subscribe';
+import Video from './components/Video';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import About from './components/About';
+
+
+
 
 const App = () => {
 
   return (
     <>
       <Header />
-      <MainSection/>
+      <MainSection />
       <Features />
       <About />
       <Intro />

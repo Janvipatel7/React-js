@@ -36,8 +36,8 @@ let featureInfo =[
 const FeaturesInfo = () => {
   return (
     <>
-        {featureInfo.map((item) => {
-            return <FeatureCard icon = {item.icon} title={item.title} desc={item.desc}/>
+        {featureInfo.map((item , index) => {
+            return <FeatureCard key={index} icon = {item.icon} title={item.title} desc={item.desc}/>
         })}
     </>
   )

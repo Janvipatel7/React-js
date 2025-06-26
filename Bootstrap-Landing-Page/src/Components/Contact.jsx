@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Contact = () => {
   return (
@@ -29,7 +29,7 @@ const Contact = () => {
                                       </div>
                                       <div className='col-sm-12'>
                                           <button className='primary-btn'> 
-                                              <i class="bi bi-send-fill"></i>
+                                              <i className="bi bi-send-fill"></i>
                                               Send Now
                                           </button>
                                       </div>

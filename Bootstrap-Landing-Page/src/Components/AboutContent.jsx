@@ -35,8 +35,8 @@ let aboutarr = [
 const AboutContent = () => {
   return (
     <>
-        {aboutarr.map((item) => {
-            return <AboutBox icon = {item.icon} title={item.title} desc={item.desc}/>
+        {aboutarr.map((item , index) => {
+            return <AboutBox key={index} icon = {item.icon} title={item.title} desc={item.desc}/>
         })}
         
     </>
