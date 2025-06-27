@@ -8,7 +8,7 @@ const SpecialFeatures = () => {
                 <div className="color-overlay "></div>
                 <div className="container position-relative">
                     <div className="row justify-content-center">
-                        <div className="col-md-8">
+                        <div className="col-12 col-md-10 col-lg-8">
                             <div className="feature">
                                 <div className="hero-content">
                                     <div className="mb-4">
@@ -17,12 +17,9 @@ const SpecialFeatures = () => {
                                     <div className="mb-5">
                                         <p className="text-center text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's typesetting industry standard dummy text ever since the typesetting.</p>
                                     </div>
-                                    <div className="d-flex justify-content-center gap-5">
+                                    <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3" >
                                         <button className="primary-btn">Learn more</button>
                                         <button className="black-btn">Download now</button>
-                                    </div>
-                                    <div className="">
-                                        {/* <img src="/public/Image/bg-pattern-light.png" alt="" /> */}
                                     </div>
                                 </div>
                             </div>

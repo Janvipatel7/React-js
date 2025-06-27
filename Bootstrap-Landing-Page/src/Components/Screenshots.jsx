@@ -1,6 +1,6 @@
 
 import AllSectionHeadline from './AllSectionHeadline'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -28,17 +28,24 @@ const Screenshots = () => {
                     <div className="row">
                         <div className="col-sm-12">
                             <Swiper
-                                modules={[Navigation, Pagination, Scrollbar, A11y]}
-                                spaceBetween={50}
-                                slidesPerView={3}
+                                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                                spaceBetween={20}
+                                slidesPerView={1}
+                                breakpoints={{
+                                    576: { slidesPerView: 1 },
+                                    768: { slidesPerView: 2 },
+                                    992: { slidesPerView: 3 },
+                                    1200: { slidesPerView: 3 },
+                                }}
+                                autoplay={{ delay: 2000, disableOnInteraction: false }}
                                 onSwiper={(swiper) => console.log(swiper)}
                                 onSlideChange={() => console.log('slide change')}
-                                autoPlay={true}
                             >
+
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -46,7 +53,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -54,7 +61,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -62,7 +69,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -70,7 +77,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -78,7 +85,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -86,7 +93,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -94,7 +101,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -102,7 +109,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-3.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -110,7 +117,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-1.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>
@@ -118,7 +125,7 @@ const Screenshots = () => {
                                 <SwiperSlide>
                                     <div className='shot-item'>
                                         <span className='overlay'>
-                                            <img src="/public/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
+                                            <img src="/Image/screenshot-2.jpg" alt="" className='img-fluid ' />
                                             <i className="bi bi-camera item-content"></i>
                                         </span>
                                     </div>

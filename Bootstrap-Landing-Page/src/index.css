@@ -94,7 +94,7 @@ ul li {
 
 .black-btn {
     background: #222D39;
-    padding: 15px 30px;
+    padding: 15px 30px !important;
     color: #ffffff;
     border: none;
     text-transform: capitalize;
