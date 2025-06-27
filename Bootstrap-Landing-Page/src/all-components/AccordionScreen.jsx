@@ -1,7 +1,5 @@
-import React from 'react'
+
 import Accordion from 'react-bootstrap/Accordion';
-
-
 import AllSectionHeadline from './AllSectionHeadline';
 import ImagePart from './ImagePart';
 
@@ -20,7 +18,7 @@ const AccordionScreen = () => {
                         <AllSectionHeadline title={title} highlight={highlight} des={des} />
                     </div>
                     <div className='row align-items-center'>
-                         <div className="col-7">
+                         <div className="col-12 col-md-7 mb-4 mb-md-0">
                              <Accordion defaultActiveKey="0">
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header className='primary-bg'>Is SANDY work for IOS?</Accordion.Header>
@@ -48,7 +46,7 @@ const AccordionScreen = () => {
                                 </Accordion.Item>
                             </Accordion>
                         </div>
-                        <div className="col-5">
+                        <div className="col-12 col-md-5">
                             <ImagePart img={image}/>
                         </div>
                     </div>
