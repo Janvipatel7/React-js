@@ -5,3 +5,7 @@
 *{
   outline: none;
 }
+
+.bg-image{
+  background-image: url('/Images/second.jpg');
+}
