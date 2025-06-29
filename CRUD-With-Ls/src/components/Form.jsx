@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const StudentForm = () => {
+const StudentForm = ({ addUser }) => {
     const [input, setInput] = useState({
         name: "", email: "", course: "", gender: "", password: "", confirmPassword: "",
     });
@@ -33,7 +33,7 @@ const StudentForm = () => {
             validationErrors.gender = "Please select your gender!";
         }
 
-        if (input.password.trim().length < 8) {
+        if (input.password.trim().length <= 8) {
             validationErrors.password = "Password must be at least 8 characters!";
         }
 
@@ -45,15 +45,19 @@ const StudentForm = () => {
 
         if (Object.keys(validationErrors).length === 0) {
             alert("Form Submitted!");
+            addUser({ ...input, id: Date.now() });
+            setInput({
+                name: "", email: "", course: "", gender: "", password: "", confirmPassword: ""
+            });
         }
+
     };
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-orange-200 to-red-500 px-4 py-10">
-            {/* White container box */}
             <div className="w-full max-w-6xl bg-white shadow-2xl rounded-2xl overflow-hidden flex flex-col lg:flex-row">
 
-                
+
                 <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 py-12">
                     <h2 className="text-red-600 font-bold text-lg">StudentVilla</h2>
                     <h1 className="text-4xl font-bold text-black mt-2">Student Form</h1>
@@ -82,7 +86,7 @@ const StudentForm = () => {
                             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                         </div>
 
-    
+
                         <div className='py-2'>
                             <label htmlFor="course" className="block text-[20px] font-medium text-gray-700 mb-2">Course</label>
                             <select id="course" value={input.course} onChange={handleChange}
@@ -95,7 +99,7 @@ const StudentForm = () => {
                             {errors.course && <p className="text-red-500 text-sm">{errors.course}</p>}
                         </div>
 
-    
+
                         <div className='py-2'>
                             <label className="block text-[20px] font-medium text-gray-700 mb-2">Gender</label>
                             <div className="flex gap-4">
@@ -115,7 +119,7 @@ const StudentForm = () => {
                             {errors.gender && <p className="text-red-500 text-sm">{errors.gender}</p>}
                         </div>
 
-            
+
                         <div className='py-2'>
                             <label htmlFor="password" className="block text-[20px] font-medium text-gray-700 mb-2">Password</label>
                             <input id="password" value={input.password} onChange={handleChange}
