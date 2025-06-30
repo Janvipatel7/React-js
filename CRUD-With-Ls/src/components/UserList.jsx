@@ -1,16 +1,20 @@
 
-
-const UserList = ({ users , deleteUser}) => {
+const UserList = ({ users , deleteUser ,  getEditUser }) => {
 
   const handleDelete = (userId) => {
       deleteUser(userId);
   }
 
+  const  handleEdit = (user) => {
+     getEditUser(user);
+  }
+
   return (
-    <div className='container mx-auto my-4 md:px-0 px-10'>
+    <div className='container mx-auto  md:px-0 px-10 my-12'>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500">
-          <thead className="text-md text-gray-700 uppercase bg-gray-50">
+        {
+          users.length > 0 ? <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+          <thead className="text-md text-gray-900 uppercase bg-gradient-to-r from-red-400 to-orange-300">
             <tr>
               <th scope="col" className="px-6 py-3">
                 Full Name
@@ -43,7 +47,7 @@ const UserList = ({ users , deleteUser}) => {
                     {user.email}
                   </td>
                   <td className="px-6 py-4">
-                    {user.course}
+                    {user.course == 1 ? "Full Stack Development" : user.course == 2 ? "UI & UX Design" : "AI & Machine Learning"}
                   </td>
                   <td className="px-6 py-4">
                     {user.gender}
@@ -51,17 +55,24 @@ const UserList = ({ users , deleteUser}) => {
                   <td className="px-6 py-4">
                     {user.password}
                   </td>
-                  <td className="px-6 py-4 flex gap-5">
-                    <button href="#" className="font-medium text-blue-600  hover:underline">Edit</button>
-                    <button href="#" className="font-medium text-blue-600  hover:underline"
-                     onClick={() => handleDelete(user.id)}>
-                      Delete</button>
+                  <td className="px-6 py-4 flex gap-4">
+                    <button href="#" className="font-medium text-xl text-green-600 "
+                       onClick={() => handleEdit(user)}>
+                           <i className="ri-edit-box-line"></i>
+                    </button>
+                    <button href="#" className="font-medium text-xl text-red-600 "
+                        onClick={() => handleDelete(user.id)}>
+                          <i className="ri-delete-bin-6-line"></i>
+                    </button>
                   </td>
                 </tr>
               })
             }
           </tbody>
-        </table>
+        </table> :  <div className="p-5 text-xl font-bold text-center text-gray-600"> 
+                      <h1> No User Data Available Add New....</h1>
+                    </div>
+        }
       </div>
     </div>
   )

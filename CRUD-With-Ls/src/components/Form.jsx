@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { toast } from "react-toastify"
 
-const StudentForm = ({ addUser }) => {
+const StudentForm = ({ addUser, editUser, updateUser }) => {
     const [input, setInput] = useState({
         name: "", email: "", course: "", gender: "", password: "", confirmPassword: "",
     });
 
     const [errors, setErrors] = useState({});
+
+    useEffect(() => {
+        if (editUser) {
+            setInput(editUser);
+        } else {
+            setInput({
+                name: "", email: "", course: "", gender: "", password: "", confirmPassword: "",
+            })
+        }
+    }, [editUser]);
 
     const handleChange = (e) => {
         setInput({ ...input, [e.target.id]: e.target.value });
@@ -41,15 +52,23 @@ const StudentForm = ({ addUser }) => {
             validationErrors.confirmPassword = "Passwords do not match!";
         }
 
-        setErrors(validationErrors);
-
-        if (Object.keys(validationErrors).length === 0) {
-            alert("Form Submitted!");
-            addUser({ ...input, id: Date.now() });
-            setInput({
-                name: "", email: "", course: "", gender: "", password: "", confirmPassword: ""
-            });
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
         }
+
+        if (editUser) {
+            updateUser(input);
+        } else {
+            addUser({ ...input, id: Date.now() });
+            toast.success("Form Submitted!");
+        }
+
+        setInput({
+            name: "", email: "", course: "", gender: "", password: "", confirmPassword: ""
+        });
+
+
 
     };
 
@@ -139,7 +158,7 @@ const StudentForm = ({ addUser }) => {
 
                         <button type="submit"
                             className="  bg-red-500 text-white rounded-full px-7 py-2 hover:bg-red-600 transition w-fit">
-                            Submit
+                            {editUser ? "Update" : "Submit"}
                         </button>
                     </form>
                 </div>
