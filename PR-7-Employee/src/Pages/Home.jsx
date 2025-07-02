@@ -2,8 +2,8 @@ import React from 'react';
 const Home = () => {
   return (
     <>
-      <section className="bg-[#D9F1FF] py-16">
-        <div className="container mx-auto px-4">
+      <section className="bg-[#D9F1FF] h-screen py-16">
+        <div className="container mx-auto ">
           <div className="row grid lg:grid-cols-2 gap-10 items-center">
               <div className="col flex justify-center items-center">
                 <img src="/Images/Home-Banner-img-01.png" alt="Team" className="w-full max-w-md z-10"/>

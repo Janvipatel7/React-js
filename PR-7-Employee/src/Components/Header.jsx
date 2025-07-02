@@ -45,7 +45,7 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                                 <Link to="/" className={`${pathname == "/" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Home</Link>
                             </li>
                             <li>
-                                <Link to="/about" className={`${pathname == "/about" ? "text-[#214ebe]" : "text-[#010e37]"}`}>About</Link>
+                                <Link to="/services" className={`${pathname == "/services" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Services</Link>
                             </li>
                             <li>
                                 <Link to="/contact" className={`${pathname == "/contact" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Contact</Link>
