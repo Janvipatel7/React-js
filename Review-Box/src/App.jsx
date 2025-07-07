@@ -1,11 +1,10 @@
+import Review from "./components/Review"
 
-
-import Review from './assets/Components/Review'
 
 const App = () => {
   return (
     <div>
-        <Review />
+       <Review />
     </div>
   )
 }
