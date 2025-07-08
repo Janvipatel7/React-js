@@ -29,7 +29,7 @@ const serviceArr = [
 
 const Services = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-[#D9F1FF] dark:bg-gray-900">
       <div className="py-16 px-4 mx-auto max-w-screen-xl">
         <div className="text-center mb-12">
           <span className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Services</span>
@@ -42,10 +42,10 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {serviceArr.map((item, i) => (
             <div key={i}
-              className="relative bg-white border border-[#dcdcdc] rounded-[20px] px-6 pt-8 pb-14 shadow hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+              className="relative bg-white border border-[#dcdcdc] hover:border-[#1268fb] rounded-[20px] px-6 pt-8 pb-14 shadow hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
       
               <div className="flex flex-col items-start">
-                <i className={`${item.icon} text-[30px] text-[#081d45] mb-6`} />
+                <i className={`${item.icon} text-[30px] text-[#081d45] mb-6 transition duration-300 group-hover:text-[#1268fb]`} />
                 <div className="w-full border-b border-gray-200 relative pb-8">
                   <img
                     src={item.image}
