@@ -12,6 +12,7 @@ const reducer = (state , action) => {
   switch (action.type) {
     case  "CLEAR_ALL" :
         return {
+
           users : []
         }
   }
@@ -42,6 +43,7 @@ const App = () => {
 
         <br></br>
         <button onClick={handleClear} >clear</button>
+        <button>bxsjb</button>
     </div>
   )
 }
