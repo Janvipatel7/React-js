@@ -1,4 +1,5 @@
 
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import Todo from "./Components/Todo"
 import '@fortawesome/fontawesome-free/css/all.min.css';
