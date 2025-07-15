@@ -22,7 +22,7 @@ const Employees = () => {
     }
     return (
         <>
-            <section className='bg-[#D9F1FF] p-[100px]'>
+            <section className='bg-[#D9F1FF] h-screen p-[100px]'>
                 <div className="container mx-auto">
                     <div className="flex items-center justify-between pb-7">
                         <h1 className="text-3xl font-semibold text-[#010e37]">Employees Details</h1>

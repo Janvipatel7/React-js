@@ -23,8 +23,8 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
 
     return (
         <>
-            <nav className="bg-[#D9F1FF]">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <nav className="bg-[#D9F1FF] ">
+                <div className="container max-mx-auto flex flex-wrap items-center justify-between mx-auto p-4">
                     <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <img src="/Images/logo.svg" alt="icon" className="w-40 pt-3" />
                     </Link>
@@ -45,7 +45,7 @@ const Header = ({ isLoggedin, setIsLoggedin }) => {
                                 <Link to="/" className={`${pathname == "/" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Home</Link>
                             </li>
                             <li>
-                                <Link to="/about" className={`${pathname == "/about" ? "text-[#214ebe]" : "text-[#010e37]"}`}>About</Link>
+                                <Link to="/services" className={`${pathname == "/services" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Services</Link>
                             </li>
                             <li>
                                 <Link to="/contact" className={`${pathname == "/contact" ? "text-[#214ebe]" : "text-[#010e37]"}`}>Contact</Link>

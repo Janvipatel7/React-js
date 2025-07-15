@@ -38,17 +38,16 @@ const AddEmployees = () => {
 
     return (
         <>
-            <div className="bg-[#D9F1FF] flex items-center justify-center px-4 py-10">
+            <div className="bg-[#D9F1FF] h-screen flex items-center justify-center px-4 py-10">
                 <div className="container mx-auto">
-                    <div className="bg-white rounded-3xl shadow-xl flex flex-col md:flex-row overflow-hidden h-[60vh]">
+                    <div className="bg-white rounded-3xl shadow-xl flex flex-col md:flex-row overflow-hidden h-[80vh]">
 
                         <div className="md:w-5/12  bg-[#0d47a1] flex items-center justify-center">
                             <img
                                 src="/Images/img-3.png"
                                 alt="Form Illustration"
-                                className="h-auto max-w-lg object-cover "/>
+                                className=" max-w-lg object-contain"/>
                         </div>
-
 
                         <div className="md:w-7/12 w-full flex items-center justify-center p-6 md:p-10">
                             <div className="w-full">
